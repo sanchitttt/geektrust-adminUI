@@ -1,6 +1,7 @@
 import { Route, Routes } from 'react-router-dom';
 import ErrorBoundary from './global/errorBoundary';
 import AdminUIPanel from './pages/admin-ui';
+import NotFound from './pages/not-found';
 
 function App() {
   return (
