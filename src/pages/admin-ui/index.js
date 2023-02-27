@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import Footer from './footer';
 import Header from './header';
 import Panel from './panel';
-const axios = require('axios');
+import axios from 'axios';
 
 function AdminUIPanel() {
   const [data, setData] = useState([]);
