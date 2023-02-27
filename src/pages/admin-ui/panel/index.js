@@ -28,8 +28,12 @@ function Panel({ data, currentPage, totalPages, searchQuery, setData, setTotalPa
           return item;
         }
       })
-      setViewableData([...filtered].slice(0, currentPage * 10))
+        setViewableData([...filtered].slice(0, 10))
       setTotalPages(Math.ceil(filtered.length / 10));
+    }
+     else {
+      setViewableData([...data].slice(0, 10))
+      setTotalPages(Math.ceil(data.length / 10));
     }
   }, [searchQuery])
 
