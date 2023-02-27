@@ -3,7 +3,6 @@ import EditIcon from '../../../common/EditIcon';
 import DeleteIcon from '../../../common/DeleteIcon';
 import { Modal } from '@mui/material';
 import Edit from './modals/Edit';
-import { searchQueryFn } from '../utils';
 
 
 function TBody({ data, item, setData, setTotalPages, searchQuery, setViewableData }) {
