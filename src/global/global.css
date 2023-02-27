@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    font-family: 'Poppins';
+}
+
+.heading {
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+}
+
+#admin-table {
+    width: 100%;
+}
+
+#panel-container {
+    margin-top: 15px;
+    overflow-x: scroll;
+}
+
+.admin-table-heading {
+    padding: 10px 25px;
+    text-align: start;
+}
+
+.admin-table-row {
+    border-bottom: 1px solid black;
+}
+
+.admin-table-column {
+    padding: 10px 25px;
+}
+
+.checkbox-custom{
+    padding: 5px;
+}
+
