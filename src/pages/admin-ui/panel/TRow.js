@@ -3,8 +3,10 @@ import EditIcon from '../../../common/EditIcon';
 import DeleteIcon from '../../../common/DeleteIcon';
 import { Modal } from '@mui/material';
 import Edit from './modals/Edit';
+import { searchQueryFn } from '../utils';
 
-function TBody({ data, item, setData, setTotalPages }) {
+
+function TBody({ data, item, setData, setTotalPages, searchQuery, setViewableData }) {
     const [showModal, setShowModal] = useState(false);
 
     const deleteHandler = () => {
@@ -14,9 +16,8 @@ function TBody({ data, item, setData, setTotalPages }) {
     }
 
     const checkboxChangeHandler = (e) => {
-        console.log( e.target.parentElement.parentElement)
-       if(e.target.checked) e.target.parentElement.parentElement.style.background = '#e0e0e0'
-       else e.target.parentElement.parentElement.style.background = '#fff'
+        if (e.target.checked) e.target.parentElement.parentElement.style.background = '#e0e0e0'
+        else e.target.parentElement.parentElement.style.background = '#fff'
     }
 
     return (

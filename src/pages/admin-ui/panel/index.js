@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import TRow from './TRow';
 import THead from './THead';
+import { searchQueryFn } from '../utils';
 
 function Panel({ data, currentPage, totalPages, searchQuery, setData, setTotalPages }) {
   const [viewableData, setViewableData] = useState([]);
@@ -16,21 +17,11 @@ function Panel({ data, currentPage, totalPages, searchQuery, setData, setTotalPa
       setViewableData(data.slice((currentPage - 1) * 10, currentPage * 10));
       setTotalPages(Math.ceil(data.length / 10));
     }
-
+    searchQueryFn(searchQuery, data, setViewableData, setTotalPages);
   }, [data, currentPage]);
 
   useEffect(() => {
-    if (searchQuery.length) {
-      const filtered = data.filter((item) => {
-        const { name, email, role } = item;
-        const regex = new RegExp(searchQuery, 'gi');
-        if (name.match(regex) || email.match(regex) || role.match(regex)) {
-          return item;
-        }
-      })
-      setViewableData([...filtered].slice(0, currentPage * 10))
-      setTotalPages(Math.ceil(filtered.length / 10));
-    }
+    searchQueryFn(searchQuery, data, setViewableData, setTotalPages);
   }, [searchQuery])
 
   return (
@@ -39,7 +30,14 @@ function Panel({ data, currentPage, totalPages, searchQuery, setData, setTotalPa
         <THead />
         <tbody>
           {viewableData.map((item) => {
-            return <TRow key={item.id} setData={setData} data={data} item={item} setTotalPages={setTotalPages} />
+            return <TRow key={item.id}
+              searchQuery={searchQuery}
+              setData={setData}
+              data={data}
+              item={item}
+              setTotalPages={setTotalPages}
+              setViewableData={setViewableData}
+            />
           })}
         </tbody>
       </table>

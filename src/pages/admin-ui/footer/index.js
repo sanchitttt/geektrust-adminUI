@@ -22,10 +22,6 @@ function Footer({ totalPages, setTotalPages, currentPage, setCurrentPage, data, 
         onClick={deleteSelectedHandler}
       >
         <Button>Delete Selected</Button></div>
-      {/* <div className='desktop:absolute desktop:right-[10px]'
-        onClick={multiSelect}
-      >
-        <Button>Select Multiple</Button></div> */}
       <Pagination currentPage={currentPage} totalPages={totalPages} setCurrentPage={setCurrentPage} />
     </div>
   )
