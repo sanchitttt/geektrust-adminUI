@@ -1,5 +1,6 @@
 import React from 'react'
 import Button from '../../../common/button/Button'
+import { updateUIAndPaginationOnDelete } from '../utils';
 import Pagination from './pagination'
 
 function Footer({ totalPages, setTotalPages, currentPage, setCurrentPage, data, setData }) {
@@ -10,10 +11,10 @@ function Footer({ totalPages, setTotalPages, currentPage, setCurrentPage, data, 
     checkboxes.forEach((checkbox) => {
       if (checkbox.checked) ids.push(checkbox.id);
     })
+
     document.getElementById('checkBoxHead').checked = false;
     const filtered = data.filter((item) => !ids.includes(item.id));
-    setData([...filtered])
-    setTotalPages(Math.ceil(filtered.length / 10));
+    updateUIAndPaginationOnDelete(filtered,setData,setTotalPages);
   }
 
   return (

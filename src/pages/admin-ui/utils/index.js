@@ -23,3 +23,15 @@ export function searchQueryFn(searchQuery, data, setViewableData, setTotalPages)
         setTotalPages(Math.ceil(data.length / 10));
     }
 }
+
+/**
+ * @function updateUIAndPagination
+ * @param {Array{}} newData 
+ * @param {Setter} setData
+ * @param {Setter} setTotalPages
+ */
+
+export function updateUIAndPaginationOnDelete(newData, setData, setTotalPages) {
+    setData([...newData]);
+    setTotalPages(Math.ceil(newData.length / 10));
+}

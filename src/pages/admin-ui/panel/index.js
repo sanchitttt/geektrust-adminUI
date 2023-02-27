@@ -3,9 +3,11 @@ import TRow from './TRow';
 import THead from './THead';
 import { searchQueryFn } from '../utils';
 
+
 function Panel({ data, currentPage, totalPages, searchQuery, setData, setTotalPages }) {
   const [viewableData, setViewableData] = useState([]);
 
+  // runs on data or page change
   useEffect(() => {
     if (currentPage === 1) {
       setViewableData(data.slice(0, currentPage * 10));
@@ -20,6 +22,7 @@ function Panel({ data, currentPage, totalPages, searchQuery, setData, setTotalPa
      if (searchQuery.length) searchQueryFn(searchQuery, data, setViewableData, setTotalPages);
   }, [data, currentPage]);
 
+  // runs when user searches for anything
   useEffect(() => {
     searchQueryFn(searchQuery, data, setViewableData, setTotalPages);
   }, [searchQuery])

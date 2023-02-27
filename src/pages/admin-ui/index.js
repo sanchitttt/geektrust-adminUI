@@ -10,6 +10,7 @@ function AdminUIPanel() {
   const [currentPage, setCurrentPage] = useState(1);
   const [searchQuery, setSearchQuery] = useState('');
 
+  // on page load
   useEffect(() => {
     const fetch = async () => {
       try {

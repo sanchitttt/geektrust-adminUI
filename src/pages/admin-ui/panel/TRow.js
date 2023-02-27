@@ -3,15 +3,15 @@ import EditIcon from '../../../common/EditIcon';
 import DeleteIcon from '../../../common/DeleteIcon';
 import { Modal } from '@mui/material';
 import Edit from './modals/Edit';
+import { updateUIAndPaginationOnDelete } from '../utils';
 
 
-function TBody({ data, item, setData, setTotalPages, searchQuery, setViewableData }) {
+function TBody({ data, item, setData, setTotalPages }) {
     const [showModal, setShowModal] = useState(false);
 
     const deleteHandler = () => {
         const filtered = data.filter((dataItem) => dataItem.id !== item.id);
-        setData([...filtered]);
-        setTotalPages(Math.ceil(filtered.length / 10));
+        updateUIAndPaginationOnDelete(filtered,setData,setTotalPages);
     }
 
     const checkboxChangeHandler = (e) => {

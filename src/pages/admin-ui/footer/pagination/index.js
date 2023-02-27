@@ -6,10 +6,10 @@ import PaginationLeft from './PaginationLeft'
 import PaginationRight from './PaginationRight'
 
 function Pagination({ totalPages, currentPage, setCurrentPage }) {
+  
   const nextPage = () => {
     if (currentPage + 1 <= totalPages) setCurrentPage(currentPage => currentPage + 1);
   }
-
   const lastPage = () => {
     if (currentPage < totalPages) setCurrentPage(totalPages)
   }

@@ -7,8 +7,8 @@ function Edit({ item, data, setData, closeModal }) {
     const [emailState, setEmailState] = useState(email);
     const [roleState, setRoleState] = useState(role);
 
+    // updates the data with new values
     const updateHandler = () => {
-        console.log('called')
         const filtered = data.map((item) => {
             if (item.id === id) {
                 item.name = nameState;
@@ -17,7 +17,6 @@ function Edit({ item, data, setData, closeModal }) {
             }
             return item;
         })
-        console.log(filtered)
         setData([...filtered]);
         closeModal();
     }
