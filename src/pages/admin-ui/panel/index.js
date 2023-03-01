@@ -19,7 +19,7 @@ function Panel({ data, currentPage, totalPages, searchQuery, setData, setTotalPa
       setViewableData(data.slice((currentPage - 1) * 10, currentPage * 10));
       setTotalPages(Math.ceil(data.length / 10));
     }
-     if (searchQuery.length) searchQueryFn(searchQuery, data, setViewableData, setTotalPages);
+    if (searchQuery.length) searchQueryFn(searchQuery, data, setViewableData, setTotalPages);
   }, [data, currentPage]);
 
   // runs when user searches for anything
