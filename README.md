@@ -5,6 +5,10 @@ This repository contains my implementation of an admin user interface for managi
 ![image](https://github.com/sanchitttt/geektrust-adminUI/assets/46245135/9a818ce4-c6af-4dab-a10f-e2cbc893764c)
 ![image](https://github.com/sanchitttt/geektrust-adminUI/assets/46245135/d8af2eda-1a78-47ef-adb0-75ac01862eaf)
 
+# Score
+![image](https://github.com/sanchitttt/geektrust-adminUI/assets/46245135/e3b90625-e788-466c-915e-467b24686675)
+
+
 # Features
 Column Titles: The column titles are designed to stand out from the user entries, making it easier for admins to identify the displayed properties.
 Search Bar: A search bar is included to enable filtering based on any user property. Admins can enter a search query, and the UI will update in real-time, displaying only the matching user entries.
