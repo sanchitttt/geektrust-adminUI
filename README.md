@@ -11,7 +11,7 @@ Search Bar: A search bar is included to enable filtering based on any user prope
 
 - Edit & Delete Rows: Admins have the ability to edit or delete rows directly in the UI. Please note that these actions only occur in memory and do not persist to any external database.
 
- -Pagination: Pagination is implemented to enhance usability and manage large datasets. Each page contains 10 rows, and buttons at the bottom of the table allow admins to navigate to specific pages, including options for the first page, previous page, next page, and last page. The pagination dynamically updates based on search/filtering criteria. For example, if there are 25 records that match a search query, the pagination buttons will only display up to the third page.
+ - Pagination: Pagination is implemented to enhance usability and manage large datasets. Each page contains 10 rows, and buttons at the bottom of the table allow admins to navigate to specific pages, including options for the first page, previous page, next page, and last page. The pagination dynamically updates based on search/filtering criteria. For example, if there are 25 records that match a search query, the pagination buttons will only display up to the third page.
 
 - Row Selection: Admins can select one or more rows by clicking on them. When a row is selected, it is highlighted with a grayish background color. Multiple selected rows can be deleted simultaneously by using the "Delete Selected" button located at the bottom left of the UI. Please note that row selection only applies to the ten rows displayed on the current page and does not affect all 50 rows.
 
